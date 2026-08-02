@@ -1,17 +1,17 @@
 package com.zidio.keystone.service;
 
-import com.zidio.keystone.entity.User;
+import com.zidio.keystone.dto.UserResponse;
+import com.zidio.keystone.dto.UserUpdateRequest;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface UserService {
 
-    List<User> getAllUsers();
+    List<UserResponse> getAllUsers();
 
-    Optional<User> getUserById(Long id);
+    UserResponse getUserById(Long id);
 
-    User updateUser(Long id, User user);
+    UserResponse updateUser(Long id, UserUpdateRequest request);
 
     void deleteUser(Long id);
 }
